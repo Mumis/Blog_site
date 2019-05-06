@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: Mumis/SimpleBlog
+  repo: Mumis/SimpleBlog
 
 media_folder: static/Assets
 public_folder: /Assets
