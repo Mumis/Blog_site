@@ -2,13 +2,13 @@ backend:
   name: github
   repo: Mumis/SimpleBlog
 
-media_folder: static/Assets
-public_folder: /Assets
+media_folder: static/assets
+public_folder: /assets
 
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "content/blog"
+    folder: "static/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
