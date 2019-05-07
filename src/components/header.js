@@ -1,28 +1,28 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 
-const Header = ({ data }) => (
-  <header>
-    {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
-    Emil Wertwein
-    
-  </header>
+const Header = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        file(relativePath: { eq: "assets/profile.png" }) {
+          childImageSharp {
+            fixed(width: 125, height: 125) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <header>
+        <Img fixed={data.file.childImageSharp.fixed} />
+        Emil Wertwein
+      </header>
+    )}
+  />
 )
-
-// const query = graphql`
-//   query {
-//     file(relativePath: { eq: "blog/avatars/kyle-mathews.jpeg" }) {
-//       childImageSharp {
-//         # Specify the image processing specifications right in the query.
-//         # Makes it trivial to update as your page's design changes.
-//         fixed(width: 125, height: 125) {
-//           ...GatsbyImageSharpFixed
-//         }
-//       }
-//     }
-//   }
-// `
 
 export default Header

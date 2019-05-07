@@ -6,6 +6,18 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
+  - name: "content"
+    label: "Content"
+    files: 
+    - name: "profile"
+      label: "Profile"
+      file: static/profile/profile.md
+      create: true
+      fields: 
+        - { name: "image", label: "Profile picture", widget: "image"}
+        - { name: "name", label: "Name", widget: "string"}
+        - { name: "description", label: "Description", widget: "string"}
+
   - name: "blog"
     label: "Blog"
     folder: "static/blog"
