@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Myblog - reactgo',
+    title: 'Emil Wertwein',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
