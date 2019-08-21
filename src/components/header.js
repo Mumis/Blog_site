@@ -1,28 +1,43 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { Wrapper } from "./headerStyle"
 
-
-const Header = () => (
+export default () => (
   <StaticQuery
     query={graphql`
       query {
-        file(relativePath: { eq: "assets/profile.png" }) {
-          childImageSharp {
-            fixed(width: 125, height: 125) {
-              ...GatsbyImageSharpFixed
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/profile.md/"}}) {
+          edges {
+            node {
+              frontmatter {
+                blog_name
+                name
+                description
+                image
+              }
             }
           }
-        }
-      }
-    `}
+       }
+      }      
+    `
+    }
+    
     render={data => (
       <header>
-        <Img fixed={data.file.childImageSharp.fixed} />
-        Emil Wertwein
+        <Wrapper>
+          <h1>
+            {data.allMarkdownRemark.edges[0].node.frontmatter.blog_name}
+          </h1>
+          <div>
+            <img src={data.allMarkdownRemark.edges[0].node.frontmatter.image}></img>
+            <span>
+              <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.name}</h2>
+              <p>{data.allMarkdownRemark.edges[0].node.frontmatter.description}</p>
+            </span>
+          </div>
+        </Wrapper>
       </header>
     )}
+
   />
 )
-
-export default Header

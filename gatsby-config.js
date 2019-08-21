@@ -1,10 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'Emil Wertwein',
+    title: 'Blog',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-offline',
+    'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -17,13 +19,11 @@ module.exports = {
         // icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    `gatsby-transformer-remark`,
-    'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/blog`,
-        name: "pages",
+        path: `${__dirname}/static/`,
+        name: "CMS",
       },
     },
   ],

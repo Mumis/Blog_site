@@ -14,9 +14,10 @@ collections:
       file: static/profile/profile.md
       create: true
       fields: 
-        - { name: "image", label: "Profile picture", widget: "image"}
-        - { name: "name", label: "Name", widget: "string"}
+        - { name: "blog_name", label: "Blog name", widget: "string"}
+        - { name: "name", label: "Your name", widget: "string"}
         - { name: "description", label: "Description", widget: "string"}
+        - { name: "image", label: "Profile picture", widget: "image"}
 
   - name: "blog"
     label: "Blog"
