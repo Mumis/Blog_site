@@ -3,6 +3,7 @@ module.exports = {
     title: 'Emil Wertwein',
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-offline',
