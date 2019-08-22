@@ -14,6 +14,7 @@ collections:
       file: static/profile/profile.md
       create: true
       fields: 
+        - { name: "emoji", label: "Favourite emoji", widget: "string"}
         - { name: "github_link", label: "Link to your github", widget: "string"}
         - { name: "twitter_link", label: "Link to your twitter", widget: "string"}
         - { name: "portfolio_link", label: "Link to your portfolio", widget: "string"}

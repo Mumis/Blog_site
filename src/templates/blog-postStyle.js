@@ -16,7 +16,7 @@ export const Wrapper = Styled.div`
         }
 
         a {
-            color: #ffff90;  
+            color: #ffff90;
         }
 
         img {

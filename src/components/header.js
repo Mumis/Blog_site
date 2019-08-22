@@ -17,10 +17,9 @@ export default () => (
               }
             }
           }
-       }
+        }
       }      
-    `
-    }
+    `}
     
     render={data => (
       <header>
@@ -32,7 +31,7 @@ export default () => (
           </h1>
 
           <div>
-            <img src={data.allMarkdownRemark.edges[0].node.frontmatter.image}></img>
+            <img src={data.allMarkdownRemark.edges[0].node.frontmatter.image} alt="profile_image"></img>
             <span>
               <h3>{data.allMarkdownRemark.edges[0].node.frontmatter.name}<span>'s personal blog.</span></h3>
               <p>{data.allMarkdownRemark.edges[0].node.frontmatter.description}</p>
@@ -47,4 +46,4 @@ export default () => (
     )}
 
   />
-)
+);
