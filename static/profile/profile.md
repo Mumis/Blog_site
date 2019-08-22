@@ -1,4 +1,5 @@
 ---
+emoji: "\U0001F49C"
 github_link: 'https://github.com/Mumis'
 twitter_link: 'https://twitter.com/wertwein'
 portfolio_link: 'https://emil.wertwein.com'
