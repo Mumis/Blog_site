@@ -34,9 +34,7 @@ export const listQuery = graphql`
   query ListQuery {
     allMarkdownRemark(
       filter: { frontmatter: { title: { ne: "" } } }
-      sort: {
-        fields: [frontmatter___date]
-        order: [ASC, DESC]
+      sort: { fields: [frontmatter___date] order: [DESC]
       }
       ) {
       edges {
@@ -45,7 +43,7 @@ export const listQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM Do, YYYY : h:mm:ss")
+            date(formatString: "MMMM Do, YYYY")
             title
             description
           }
