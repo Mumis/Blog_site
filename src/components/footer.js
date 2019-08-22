@@ -26,16 +26,17 @@ export default () => (
       <footer>
         <Wrapper>
           <a href={data.allMarkdownRemark.edges[0].node.frontmatter.github_link} rel="noopener noreferrer" target="_blank">
-            github 
+            Github 
           </a>
           {data.allMarkdownRemark.edges[0].node.frontmatter.emoji}
           <a href={data.allMarkdownRemark.edges[0].node.frontmatter.portfolio_link} rel="noopener noreferrer" target="_blank">
-            portfolio 
+            Portfolio 
           </a>
           {data.allMarkdownRemark.edges[0].node.frontmatter.emoji}
           <a href={data.allMarkdownRemark.edges[0].node.frontmatter.twitter_link} rel="noopener noreferrer" target="_blank">
-             twitter 
-            </a>
+             Twitter 
+          </a>
+          <p>Made by Emil Wertwein</p>
         </Wrapper>
       </footer>
     )}

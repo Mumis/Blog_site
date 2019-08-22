@@ -17,7 +17,7 @@ const IndexPage = (props) => {
             <div className="post-list">
               <h2>{node.frontmatter.title}</h2>
               <small>{node.frontmatter.date}</small>
-              <p>{node.excerpt}</p>
+              <p>{node.frontmatter.description}</p>
             </div>
           </Link>
         ))}
@@ -34,17 +34,20 @@ export const listQuery = graphql`
   query ListQuery {
     allMarkdownRemark(
       filter: { frontmatter: { title: { ne: "" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
+      sort: {
+        fields: [frontmatter___date]
+        order: [ASC, DESC]
+      }
+      ) {
       edges {
         node {
           fields{
             slug
           }
-          excerpt(pruneLength: 150)
           frontmatter {
-            date(formatString: "MMMM Do YYYY")
+            date(formatString: "MMMM Do, YYYY : h:mm:ss")
             title
+            description
           }
         }
       }

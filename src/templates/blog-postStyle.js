@@ -20,6 +20,7 @@ export const Wrapper = Styled.div`
         }
 
         img {
+            max-width: 100%;
             margin-left: auto;
             margin-right: auto;
             display: block;
