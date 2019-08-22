@@ -1,7 +1,7 @@
 ---
 blog_name: Coder's delight
-name: 'Emil Wertwein '
-description: Writing code is mah thing
+name: 'Emil Wertwein'
+description: writing code is what i do.
 image: /assets/charlie-brown.jpg
 ---
 

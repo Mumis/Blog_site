@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import { Wrapper } from "./headerStyle"
 
 export default () => (
@@ -26,12 +26,12 @@ export default () => (
       <header>
         <Wrapper>
           <h1>
-            {data.allMarkdownRemark.edges[0].node.frontmatter.blog_name}
+            <Link to="/">{data.allMarkdownRemark.edges[0].node.frontmatter.blog_name}</Link>
           </h1>
           <div>
             <img src={data.allMarkdownRemark.edges[0].node.frontmatter.image}></img>
             <span>
-              <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.name}</h2>
+              <h3>{data.allMarkdownRemark.edges[0].node.frontmatter.name}<span>'s personal blog.</span></h3>
               <p>{data.allMarkdownRemark.edges[0].node.frontmatter.description}</p>
             </span>
           </div>
