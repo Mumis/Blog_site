@@ -8,8 +8,6 @@ Hello to everyone or no one who reads this! This is my first time using gatsby w
 
 Now im gonna play with the editor a bit more so ignore the meaningless text down below 👇
 
-
-
 # Hello world
 
 **Lorem ipsum**
