@@ -14,6 +14,9 @@ collections:
       file: static/profile/profile.md
       create: true
       fields: 
+        - { name: "github_link", label: "Link to your github", widget: "string"}
+        - { name: "twitter_link", label: "Link to your twitter", widget: "string"}
+        - { name: "portfolio_link", label: "Link to your portfolio", widget: "string"}
         - { name: "blog_name", label: "Blog name", widget: "string"}
         - { name: "name", label: "Your name", widget: "string"}
         - { name: "description", label: "Description", widget: "string"}

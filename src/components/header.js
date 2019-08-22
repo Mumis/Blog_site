@@ -24,10 +24,13 @@ export default () => (
     
     render={data => (
       <header>
+
         <Wrapper>
+
           <h1>
             <Link to="/">{data.allMarkdownRemark.edges[0].node.frontmatter.blog_name}</Link>
           </h1>
+
           <div>
             <img src={data.allMarkdownRemark.edges[0].node.frontmatter.image}></img>
             <span>
@@ -35,7 +38,11 @@ export default () => (
               <p>{data.allMarkdownRemark.edges[0].node.frontmatter.description}</p>
             </span>
           </div>
+
         </Wrapper>
+
+        <br/>
+
       </header>
     )}
 

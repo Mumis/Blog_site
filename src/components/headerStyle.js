@@ -4,7 +4,6 @@ export const Wrapper = Styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 1.2rem;
     color: white;
 
     @media(max-width: 700px) {
@@ -18,12 +17,12 @@ export const Wrapper = Styled.div`
 
     h1 {
         order: 2;
-        font-size: 1.7rem;
+        font-size: 1.9rem;
         font-weight: 900;
         margin-bottom: 0;
 
-        @media(max-width: 700px) {    
-            margin-bottom: 1.45rem;
+        @media(max-width: 700px) {
+            margin-bottom: 2rem;
         }
     }
 
@@ -33,6 +32,7 @@ export const Wrapper = Styled.div`
     }
 
     img {
+        object-fit: cover;
         height: 80px;
         width: 80px;
         border-radius: 50%;
